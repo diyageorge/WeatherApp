@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+    <style>
+      h1 {
+        color: #1964d6;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 35px;
+      }
+      h2 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+      }
+      .number {
+        font-weight: lighter;
+      }
+
+      ul {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        list-style: none;
+        padding: 10px 0;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      li:hover {
+        background: #fffbef;
+      }
+      .ten {
+        font-size: 15px;
+        letter-spacing: 7px;
+        line-height: 5;
+        color: #4d4c48;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .fifteen {
+        font-size: 15px;
+        letter-spacing: 7px;
+        line-height: 5;
+        color: #4d4c48;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .twentyfive {
+        font-size: 15px;
+        letter-spacing: 7px;
+        line-height: 5;
+        color: #4d4c48;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: white;
+        color: #1a64d6;
+      }
+
+      p {
+        text-align: center;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="font-size: 2rem; width: 100%; text-align: center">🌤</div>
+    <h1>Currently 21° in Tokyo</h1>
+    <h2><span class="number">13°/</span>23°</h2>
+
+    <ul>
+      <li>
+        🌧Tomorrow
+        <div class="ten">10°/ <b>22°</b></div>
+      </li>
+      <br />
+      <li>
+        🌥Saturday
+        <div class="fifteen">15°/ <b>17°</b></div>
+      </li>
+      <br />
+      <li>
+        ☀️Sunday
+        <div class="twentyfive">25°/ <b>28°</b></div>
+      </li>
+      <br />
+    </ul>
+    <button>Change city</button>
+    <p>Coded by Diya George</p>
+
+    <script>
+      function contactUs() {
+        let abode = prompt("Where is your home town?");
+        alert("Your home town is" + " " + abode);
+        let first = prompt("What is your first name?");
+        let last = prompt("What is your last name?");
+
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "Your full name is" + " " + first + " " + last;
+      }
+
+      let contactButton = document.querySelector("button");
+      contactButton.addEventListener("click", contactUs);
+    </script>
+  </body>
+</html>
